@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+    font-family: 'Arial', sans-serif;
+    background: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.heading {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-top: 20px;
+}
+
+.heading span {
+    color: #28a745;
+}
+
+.services .container {
+    background: white;
+    padding: 50px 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.services .box {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.services .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.services .box i {
+    color: #007bff;
+}
+
+.services .box h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.services .box p {
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+.services .btn {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.services .btn:hover {
+    background: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .services .container {
+        padding: 30px 15px;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+
+    .services .box h3 {
+        font-size: 1.3rem;
+    }
+
+    .services .box p {
+        font-size: 0.9rem;
+    }
+}
+
+  </style>
+</head>
+<body>
+    <!-- service section starts -->
+    <section class="services" id="services">
+        <div class="container">
+            <h1 class="heading">Our <span>Services</span></h1>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="box p-4 text-center">
+                        <i class="fas fa-notes-medical fa-3x mb-3"></i>
+                        <h3>Free Checkups</h3>
+                        <p>We offer free checkup camps to help you monitor your health regularly. Early detection of health issues can save lives, and we're committed to providing this service to our community.</p>
+                        <a href="#" class="btn btn-primary">Learn More <span class="fas fa-chevron-right"></span></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="box p-4 text-center">
+                        <i class="fas fa-ambulance fa-3x mb-3"></i>
+                        <h3>24/7 Ambulance</h3>
+                        <p>Our 24/7 ambulance service ensures that you receive timely medical attention during emergencies. We are just a call away, ready to provide immediate care.</p>
+                        <a href="#" class="btn btn-primary">Learn More <span class="fas fa-chevron-right"></span></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="box p-4 text-center">
+                        <i class="fas fa-user-md fa-3x mb-3"></i>
+                        <h3>Expert Doctors</h3>
+                        <p>Our team of highly qualified doctors are experts in their fields, providing you with the best medical care and advice to keep you healthy and safe.</p>
+                        <a href="#" class="btn btn-primary">Learn More <span class="fas fa-chevron-right"></span></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="box p-4 text-center">
+                        <i class="fas fa-pills fa-3x mb-3"></i>
+                        <h3>Medicines</h3>
+                        <p>We provide a wide range of medicines to ensure you get the right treatment. Our pharmacy is stocked with the latest and most effective medications.</p>
+                        <a href="#" class="btn btn-primary">Learn More <span class="fas fa-chevron-right"></span></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="box p-4 text-center">
+                        <i class="fas fa-procedures fa-3x mb-3"></i>
+                        <h3>Bed Facility</h3>
+                        <p>Our hospital offers over 500 beds, ensuring that we have the capacity to take care of you and your loved ones when needed.</p>
+                        <a href="#" class="btn btn-primary">Learn More <span class="fas fa-chevron-right"></span></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="box p-4 text-center">
+                        <i class="fas fa-heartbeat fa-3x mb-3"></i>
+                        <h3>Total Care</h3>
+                        <p>Our holistic approach to healthcare covers all aspects of your well-being, from preventive measures to treatment and rehabilitation.</p>
+                        <a href="#" class="btn btn-primary">Learn More <span class="fas fa-chevron-right"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- service section ends -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

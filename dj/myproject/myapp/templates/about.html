@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-top: 20px;
+        }
+
+        .heading span {
+            color: #28a745;
+        }
+
+        .about .container {
+            background: white;
+            padding: 50px 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        .about .image img {
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .about .content h3 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .about .content p {
+            font-size: 1rem;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        .about .btn {
+            background: linear-gradient(135deg, #007bff 0%, #28a745 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .about .btn:hover {
+            background: linear-gradient(135deg, #28a745 0%, #007bff 100%);
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .about .container {
+                padding: 30px 15px;
+            }
+
+            .heading {
+                font-size: 2rem;
+            }
+
+            .about .content h3 {
+                font-size: 1.5rem;
+            }
+
+            .about .content p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- about section starts-->
+    <section class="about" id="about">
+        <div class="container">
+            <h1 class="heading"><span>About</span> Us</h1>
+            <div class="row">
+                <!-- <div class="col-md-6">
+                    <div class="image">
+                        <img src="https://via.placeholder.com/500" alt="About Us Image">
+                    </div>
+                </div> -->
+                <div class="col-md-6">
+                    <div class="content">
+                        <h3>We Take Care of Your Healthy Life</h3>
+                        <p>At Medcare, we prioritize your health and well-being above all else. Our team of dedicated healthcare professionals is committed to providing you with comprehensive medical services and compassionate care.</p>
+                        <p>From advanced diagnostics to personalized treatment plans, we are here to support you every step of the way. Trust us to be your partners in health, guiding you towards a healthier, happier life.</p>
+                        <a href="#" class="btn btn-primary">Learn More <span class="fas fa-chevron-right"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about section ends-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+        }
+        .book {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            color: #fff;
+        }
+        .heading {
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 40px;
+        }
+        .heading span {
+            color: #ff6f61;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .image {
+            flex: 1;
+            max-width: 50%;
+            text-align: center;
+            padding: 20px;
+        }
+        .image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        form {
+            flex: 1;
+            max-width: 40%;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        form h3 {
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #ff6f61;
+            text-align: center;
+        }
+        .box {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #ff6f61;
+            border-radius: 5px;
+            background: #fff;
+            color: #333;
+            transition: border-color 0.3s;
+        }
+        .box:focus {
+            border-color: #ff3d00;
+            outline: none;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #ff6f61;
+            color: #fff;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .btn:hover {
+            background: #ff3d00;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- book section starts-->
+    <section class="book" id="book">
+        <h1 class="heading"><span>Book</span> Now</h1>
+        <div class="row">
+            <form method="post" action="{% url 'index' %}">
+                {% csrf_token %}
+                <h3>Book Appointment</h3>
+                <input type="text" placeholder="Your Name" class="box" name="username">
+                <input type="number" placeholder="Your Number" class="box" name="usernumber">
+                <input type="email" placeholder="Your Email" class="box" name="useremail">
+                <input type="date" class="box" name="date">
+                <input type="submit" value="Book Now" class="btn" onclick="alert('SUCCESS')">
+            </form>
+        </div>
+    </section>
+    <!-- book section ends -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

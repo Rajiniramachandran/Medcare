@@ -1,0 +1,247 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-top: 20px;
+        }
+
+        .heading span {
+            color: #28a745;
+        }
+
+        .doctors .container {
+            background: white;
+            padding: 50px 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        .doctors .box {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .doctors .box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .doctors .box img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 5px solid #007bff;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .doctors .box img:hover {
+            border-color: #28a745;
+            transform: scale(1.1);
+        }
+
+        .doctors .box h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-top: 15px;
+        }
+
+        .doctors .box span {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        .doctors .share {
+            margin-top: 15px;
+        }
+
+        .doctors .share a {
+            color: #007bff;
+            margin: 0 10px;
+            font-size: 1.2rem;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .doctors .share a:hover {
+            color: #28a745;
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+            .doctors .container {
+                padding: 30px 15px;
+            }
+
+            .heading {
+                font-size: 2rem;
+            }
+
+            .doctors .box h3 {
+                font-size: 1.3rem;
+            }
+
+            .doctors .box span {
+                font-size: 0.9rem;
+            }
+
+            .doctors .box img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        /* Additional colorful and attractive styling */
+        .doctors .box:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #007bff, #28a745);
+            transition: height 0.3s;
+        }
+
+        .doctors .box:hover:before {
+            height: 100%;
+        }
+
+        .doctors .box:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #28a745, #007bff);
+            transition: height 0.3s;
+        }
+
+        .doctors .box:hover:after {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- doctors section starts -->
+    <section class="doctors" id="doctors">
+        <div class="container">
+            <h1 class="heading">Our <span>Doctors</span></h1>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="box">
+                        <img src="{% static 'images/doc-1.jpeg' %}" alt="John Deo" class="img-fluid">
+                        <h3>John Deo</h3>
+                        <span>Expert Doctor</span>
+                        <div class="share mt-3">
+                            <a href="#" class="fab fa-facebook-f"></a>
+                            <a href="#" class="fab fa-twitter"></a>
+                            <a href="#" class="fab fa-instagram"></a>
+                            <a href="#" class="fab fa-linkedin"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="box">
+                        <img src="{% static 'images/doc-2.jpeg' %}" alt="Jane Smith" class="img-fluid">
+                        <h3>Jane Smith</h3>
+                        <span>Cardiologist</span>
+                        <div class="share mt-3">
+                            <a href="#" class="fab fa-facebook-f"></a>
+                            <a href="#" class="fab fa-twitter"></a>
+                            <a href="#" class="fab fa-instagram"></a>
+                            <a href="#" class="fab fa-linkedin"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="box">
+                        <img src="{% static 'images/doc-3.jpeg' %}" alt="Michael Lee" class="img-fluid">
+                        <h3>Michael Lee</h3>
+                        <span>Orthopedic Surgeon</span>
+                        <div class="share mt-3">
+                            <a href="#" class="fab fa-facebook-f"></a>
+                            <a href="#" class="fab fa-twitter"></a>
+                            <a href="#" class="fab fa-instagram"></a>
+                            <a href="#" class="fab fa-linkedin"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="box">
+                        <img src="{% static 'images/doc-4.jpeg' %}" alt="Sarah Johnson" class="img-fluid">
+                        <h3>Sarah Johnson</h3>
+                        <span>Pediatrician</span>
+                        <div class="share mt-3">
+                            <a href="#" class="fab fa-facebook-f"></a>
+                            <a href="#" class="fab fa-twitter"></a>
+                            <a href="#" class="fab fa-instagram"></a>
+                            <a href="#" class="fab fa-linkedin"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="box">
+                        <img src="{% static 'images/doc-5.jpeg' %}" alt="William Brown" class="img-fluid">
+                        <h3>William Brown</h3>
+                        <span>Neurologist</span>
+                        <div class="share mt-3">
+                            <a href="#" class="fab fa-facebook-f"></a>
+                            <a href="#" class="fab fa-twitter"></a>
+                            <a href="#" class="fab fa-instagram"></a>
+                            <a href="#" class="fab fa-linkedin"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="box">
+                        <img src="{% static 'images/doc-6.jpeg' %}" alt="Linda Williams" class="img-fluid">
+                        <h3>Linda Williams</h3>
+                        <span>General Physician</span>
+                        <div class="share mt-3">
+                            <a href="#" class="fab fa-facebook-f"></a>
+                            <a href="#" class="fab fa-twitter"></a>
+                            <a href="#" class="fab fa-instagram"></a>
+                            <a href="#" class="fab fa-linkedin"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- doctors section ends -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
